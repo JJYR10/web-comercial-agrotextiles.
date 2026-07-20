@@ -1,0 +1,10 @@
+# Indicar a todos los buscadores que pueden indexar la web
+User-agent: *
+Allow: /
+
+# Evitar que indexen páginas internas duplicadas si en el futuro añades scripts
+Disallow: /private/
+Disallow: /config/
+
+# Ruta de tu mapa del sitio (Sitemap) cuando lo tengas listo
+# Sitemap: https://tu-sitio-web.vercel.app/sitemap.xml
