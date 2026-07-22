@@ -1,483 +1,90 @@
-<!DOCTYPE html>
+<!DOCTYPE1 html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGROTEXTILES - Soluciones Plásticas de Polipropileno</title>
-    <style>
-        /* RESET & ESTILOS BASE */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-        }
-
-        body {
-            background-color: #f8fafc;
-            color: #334155;
-            line-height: 1.6;
-        }
-
-        /* BARRA SUPERIOR DE CONTACTO */
-        .top-bar {
-            background-color: #0b1329;
-            color: #94a3b8;
-            padding: 8px 5%;
-            font-size: 0.85rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #1e293b;
-        }
-
-        .top-bar-info {
-            display: flex;
-            gap: 20px;
-        }
-
-        .top-bar-info span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        /* HEADER & NAVEGACIÓN */
-        .top-header {
-            background-color: #0f172a;
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #f97316; /* Naranja corporativo */
-            text-decoration: none;
-            letter-spacing: 0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #cbd5e1;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: #10b981;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            background: linear-gradient(135deg, #0b1329 0%, #0f172a 100%);
-            color: #ffffff;
-            padding: 80px 5%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            min-height: 480px;
-        }
-
-        .hero-content h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1.25;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        .hero-content p {
-            color: #94a3b8;
-            font-size: 1.1rem;
-            margin-bottom: 35px;
-            max-width: 540px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn-green {
-            background-color: #10b981;
-            color: #ffffff;
-            padding: 14px 28px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
-            transition: background-color 0.2s;
-            border: none;
-            display: inline-block;
-        }
-
-        .btn-green:hover {
-            background-color: #059669;
-        }
-
-        .btn-blue {
-            background-color: #2563eb;
-            color: #ffffff;
-            padding: 14px 28px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
-            transition: background-color 0.2s;
-            border: none;
-            display: inline-block;
-        }
-
-        .btn-blue:hover {
-            background-color: #1d4ed8;
-        }
-
-        .hero-card {
-            background-color: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 12px;
-            padding: 35px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-card h3 {
-            color: #38bdf8;
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-        }
-
-        .hero-card p {
-            color: #94a3b8;
-            font-size: 0.95rem;
-        }
-
-        /* SECCIÓN LÍNEAS DE PRODUCCIÓN */
-        .section-production {
-            padding: 70px 5%;
-            text-align: center;
-            background-color: #ffffff;
-        }
-
-        .section-title {
-            font-size: 1.9rem;
-            font-weight: 800;
-            color: #0f172a;
-            margin-bottom: 10px;
-        }
-
-        .section-subtitle {
-            color: #64748b;
-            font-size: 1.05rem;
-            margin-bottom: 45px;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .card-box {
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            padding: 30px;
-            text-align: left;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .card-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .card-box h3 {
-            font-size: 1.2rem;
-            color: #0f172a;
-            margin-bottom: 12px;
-        }
-
-        .card-box p {
-            color: #64748b;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-
-        .card-box a {
-            color: #10b981;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-
-        /* SECCIÓN SOLUCIONES PLÁSTICAS PARA LA INDUSTRIA Y EL CAMPO */
-        .solutions-section {
-            padding: 80px 5%;
-            background-color: #f1f5f9;
-        }
-
-        .solutions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .solution-card {
-            background: #ffffff;
-            border: 1px solid #cbd5e1;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .solution-card-header {
-            background-color: #0f172a;
-            color: #ffffff;
-            padding: 20px 25px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .solution-icon {
-            font-size: 1.8rem;
-            background: rgba(255, 255, 255, 0.1);
-            width: 45px;
-            height: 45px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .solution-card-header h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-        }
-
-        .solution-card-body {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .solution-card-body p {
-            color: #475569;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-
-        .solution-list {
-            list-style: none;
-            margin-bottom: 25px;
-        }
-
-        .solution-list li {
-            position: relative;
-            padding-left: 24px;
-            margin-bottom: 10px;
-            color: #334155;
-            font-size: 0.92rem;
-        }
-
-        .solution-list li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-        }
-
-        .btn-card {
-            background-color: #0f172a;
-            color: #ffffff;
-            text-align: center;
-            padding: 12px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background-color 0.2s;
-            display: block;
-        }
-
-        .btn-card:hover {
-            background-color: #1e293b;
-        }
-
-        /* PIE DE PÁGINA */
-        footer {
-            background-color: #0f172a;
-            color: #94a3b8;
-            padding: 30px 5%;
-            text-align: center;
-            font-size: 0.9rem;
-            border-top: 1px solid #1e293b;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .hero {
-                grid-template-columns: 1fr;
-                padding: 50px 5%;
-            }
-            .nav-links {
-                display: none;
-            }
-            .top-bar {
-                flex-direction: column;
-                gap: 5px;
-                text-align: center;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibrafil - Transformando la Industria</title>
+  <!-- FontAwesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="top-bar">
-        <div class="top-bar-info">
-            <span>📞 Ventas Planta: +51 (01) 500-0000</span>
-            <span>✉️ contacto@agrotextiles.com</span>
-        </div>
-        <div>
-            <span>📍 Envíos a Nivel Nacional e Internacional</span>
-        </div>
+  <!-- 1. TOP BAR (Correos, Teléfonos, Idiomas) -->
+  <div class="top-bar">
+    <div class="contact-info">
+      <div><i class="fa-regular fa-envelope"></i> ventasnacionales@grupofibrafil.com</div>
+      <div><i class="fa-regular fa-envelope"></i> ventasinternacionales@grupofibrafil.com</div>
+    </div>
+    <div class="contact-info">
+      <div><i class="fa-solid fa-phone"></i> +51 919 440 004</div>
+      <div><i class="fa-solid fa-phone"></i> +51 905 467 138</div>
+    </div>
+    <div class="language-selector">
+      <span>🇪🇸</span> <span>🇬🇧</span> <span>🇧🇷</span>
+    </div>
+  </div>
+
+  <!-- 2. NAVBAR PRINCIPAL (Naranja) -->
+  <header class="main-header">
+    <div class="logo">
+      <img src="logo.png" alt="Fibrafil Logo">
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#" class="active">Inicio</a></li>
+        <li><a href="#">Catálogo <i class="fa-solid fa-chevron-down"></i></a></li>
+        <li><a href="#">Industrias <i class="fa-solid fa-chevron-down"></i></a></li>
+        <li><a href="#">Exportación</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Contáctanos <i class="fa-solid fa-chevron-down"></i></a></li>
+        <li><a href="#">Noticias</a></li>
+        <li><a href="#">🇪🇸 Español <i class="fa-solid fa-chevron-down"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 3. HERO SECTION (Banner en 3 Columnas) -->
+  <section class="hero-section">
+    <div class="hero-col col-1">
+      <div class="badge"><i class="fa-solid fa-industry"></i> Fábrica <strong>Chilca I</strong></div>
+    </div>
+    
+    <div class="hero-col col-2">
+      <div class="badge"><i class="fa-solid fa-industry"></i> Fábrica <strong>Chilca II</strong></div>
+      <a href="#" class="btn-primary">IR A NOSOTROS</a>
     </div>
 
-    <header class="top-header">
-        <a href="index.html" class="logo">AGROTEXTILES</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#catalogo">Catálogo</a></li>
-            <li><a href="#soluciones">Soluciones</a></li>
-            <li><a href="gracias.html">Cotizaciones</a></li>
-        </ul>
-    </header>
+    <div class="hero-col col-3">
+      <div class="badge"><i class="fa-solid fa-industry"></i> Fábrica <strong>Lurín</strong></div>
+    </div>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Soluciones Plásticas de Polipropileno de Alta Durabilidad</h1>
-            <p>
-                Fabricación y distribución de telas tejidas, sacos y agrotextiles diseñados para resistir condiciones extremas y maximizar el rendimiento industrial y agrícola.
-            </p>
-            <div class="hero-buttons">
-                <a href="gracias.html" class="btn-green">Solicitar Cotización Directa</a>
-                <a href="#catalogo" class="btn-blue">Ver Catálogo Técnico</a>
-            </div>
-        </div>
+    <!-- Overlay de datos destacados -->
+    <div class="hero-stats">
+      <div class="stat-circle">
+        <h2>+50</h2>
+        <span>AÑOS</span>
+      </div>
+      <h3>TRANSFORMANDO <span>LA INDUSTRIA</span></h3>
 
-        <div class="hero-card">
-            <h3>Atención Comercial & Envíos</h3>
-            <p>Ventas al por mayor directo de planta para proyectos industriales y sector agropecuario.</p>
-        </div>
-    </section>
+      <div class="stat-circle">
+        <h2>+3</h2>
+      </div>
+      <h3>PLANTAS <span>INDUSTRIALES</span></h3>
+    </div>
+  </section>
 
-    <section id="catalogo" class="section-production">
-        <h2 class="section-title">Líneas de Producción y Catálogo Técnico</h2>
-        <p class="section-subtitle">Especializados en soluciones plásticas de polipropileno de alta densidad.</p>
+  <!-- Redes Sociales Flotantes Derecha -->
+  <div class="social-sidebar">
+    <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+  </div>
 
-        <div class="grid-3">
-            <div class="card-box">
-                <h3>Agrotextiles y Mallas</h3>
-                <p>Mallas Raschel, suelo cobertor (Ground Cover) y telas antiáfidos para protección de cultivos.</p>
-                <a href="gracias.html">Consultar especificaciones →</a>
-            </div>
-
-            <div class="card-box">
-                <h3>Sacos de Polipropileno</h3>
-                <p>Sacos tejidos convencionales, laminados y con fuelles para envasado de alimentos y minerales.</p>
-                <a href="gracias.html">Consultar especificaciones →</a>
-            </div>
-
-            <div class="card-box">
-                <h3>Telas Tejidas Industriales</h3>
-                <p>Rollos de tela plástica de polipropileno de alta resistencia para empaque y cerramiento.</p>
-                <a href="gracias.html">Consultar especificaciones →</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="soluciones" class="solutions-section">
-        <div style="text-align: center;">
-            <h2 class="section-title">Soluciones Plásticas para la Industria y el Campo</h2>
-            <p class="section-subtitle">Productos diseñados bajo altos estándares de calidad y durabilidad.</p>
-        </div>
-
-        <div class="solutions-grid">
-            <div class="solution-card">
-                <div class="solution-card-header">
-                    <div class="solution-icon">🧵</div>
-                    <h3>Telas Tejidas de Polipropileno</h3>
-                </div>
-                <div class="solution-card-body">
-                    <p>Telas plásticas de alta resistencia mecánica, ideales para procesos de confección, empaque industrial y cerramientos de protección.</p>
-                    <ul class="solution-list">
-                        <li>Alta resistencia a la tensión y rasgado.</li>
-                        <li>Tratamiento con aditivo UV opcional.</li>
-                        <li>Variedad de gramajes, anchos y colores.</li>
-                    </ul>
-                    <a href="gracias.html" class="btn-card">Cotizar Telas Tejidas</a>
-                </div>
-            </div>
-
-            <div class="solution-card">
-                <div class="solution-card-header">
-                    <div class="solution-icon">🌱</div>
-                    <h3>Agrotextiles y Mallas de Protección</h3>
-                </div>
-                <div class="solution-card-body">
-                    <p>Mallas y coberturas agrícolas diseñadas para el control climático, protección contra plagas y optimización de cultivos.</p>
-                    <ul class="solution-list">
-                        <li>Mallas Raschel con diversos porcentajes de sombra.</li>
-                        <li>Suelo cobertor (Ground Cover) control de maleza.</li>
-                        <li>Protección contra granizo, viento y plagas.</li>
-                    </ul>
-                    <a href="gracias.html" class="btn-card">Cotizar Agrotextiles</a>
-                </div>
-            </div>
-
-            <div class="solution-card">
-                <div class="solution-card-header">
-                    <div class="solution-icon">📦</div>
-                    <h3>Sacos Industriales de Polipropileno</h3>
-                </div>
-                <div class="solution-card-body">
-                    <p>Empaques resistentes para el envasado y transporte seguro de productos agrícolas, minerales, químicos y alimentos.</p>
-                    <ul class="solution-list">
-                        <li>Sacos convencionales y con fuelles laterales.</li>
-                        <li>Opciones laminadas y con liner de polietileno.</li>
-                        <li>Impresión personalizada para identificación de marca.</li>
-                    </ul>
-                    <a href="gracias.html" class="btn-card">Cotizar Sacos</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; AGROTEXTILES. Todos los derechos reservados.</p>
-    </footer>
+  <!-- Botón WhatsApp Flotante -->
+  <a href="https://wa.me/51919440004" class="whatsapp-btn" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i> ¿Cómo puedo ayudarte?
+  </a>
 
 </body>
 </html>
