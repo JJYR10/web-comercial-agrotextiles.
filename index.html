@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGROTEXTILES - Soluciones Plásticas de Polipropileno</title>
     <style>
-        /* RESET & BASE */
+        /* RESET & ESTILOS BASE */
         * {
             margin: 0;
             padding: 0;
@@ -19,10 +19,32 @@
             line-height: 1.6;
         }
 
-        /* HEADER / NAVEGACIÓN */
+        /* BARRA SUPERIOR DE CONTACTO */
+        .top-bar {
+            background-color: #0b1329;
+            color: #94a3b8;
+            padding: 8px 5%;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .top-bar-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .top-bar-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* HEADER & NAVEGACIÓN */
         .top-header {
             background-color: #0f172a;
-            border-bottom: 1px solid #1e293b;
             padding: 15px 5%;
             display: flex;
             justify-content: space-between;
@@ -30,10 +52,11 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
         }
 
         .logo {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 800;
             color: #f97316; /* Naranja corporativo */
             text-decoration: none;
@@ -203,7 +226,7 @@
             font-size: 0.9rem;
         }
 
-        /* NUEVA SECCIÓN: SOLUCIONES PLÁSTICAS PARA LA INDUSTRIA Y EL CAMPO */
+        /* SECCIÓN SOLUCIONES PLÁSTICAS PARA LA INDUSTRIA Y EL CAMPO */
         .solutions-section {
             padding: 80px 5%;
             background-color: #f1f5f9;
@@ -303,6 +326,16 @@
             background-color: #1e293b;
         }
 
+        /* PIE DE PÁGINA */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 30px 5%;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid #1e293b;
+        }
+
         /* RESPONSIVE */
         @media (max-width: 900px) {
             .hero {
@@ -312,10 +345,25 @@
             .nav-links {
                 display: none;
             }
+            .top-bar {
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
+
+    <div class="top-bar">
+        <div class="top-bar-info">
+            <span>📞 Ventas Planta: +51 (01) 500-0000</span>
+            <span>✉️ contacto@agrotextiles.com</span>
+        </div>
+        <div>
+            <span>📍 Envíos a Nivel Nacional e Internacional</span>
+        </div>
+    </div>
 
     <header class="top-header">
         <a href="index.html" class="logo">AGROTEXTILES</a>
@@ -426,6 +474,10 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <p>&copy; AGROTEXTILES. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
