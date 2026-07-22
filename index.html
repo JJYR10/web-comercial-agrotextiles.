@@ -58,7 +58,7 @@
             color: #10b981;
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION (Vista previa oscura en Vercel) */
         .hero {
             background: linear-gradient(135deg, #0b1329 0%, #0f172a 100%);
             color: #ffffff;
@@ -67,11 +67,11 @@
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: center;
-            min-height: 480px;
+            min-height: 500px;
         }
 
         .hero-content h1 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             font-weight: 800;
             line-height: 1.25;
             margin-bottom: 20px;
@@ -92,7 +92,7 @@
         }
 
         .btn-green {
-            background-color: #10b981;
+            background-color: #10b981; /* Verde esmeralda */
             color: #ffffff;
             padding: 14px 28px;
             border-radius: 6px;
@@ -109,7 +109,7 @@
         }
 
         .btn-blue {
-            background-color: #2563eb;
+            background-color: #2563eb; /* Azul corporativo */
             color: #ffffff;
             padding: 14px 28px;
             border-radius: 6px;
@@ -146,7 +146,7 @@
 
         /* SECCIÓN LÍNEAS DE PRODUCCIÓN */
         .section-production {
-            padding: 70px 5%;
+            padding: 80px 5%;
             text-align: center;
             background-color: #ffffff;
         }
@@ -161,13 +161,13 @@
         .section-subtitle {
             color: #64748b;
             font-size: 1.05rem;
-            margin-bottom: 45px;
+            margin-bottom: 50px;
         }
 
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
         .card-box {
@@ -185,7 +185,7 @@
         }
 
         .card-box h3 {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: #0f172a;
             margin-bottom: 12px;
         }
@@ -203,5 +203,71 @@
             font-size: 0.9rem;
         }
 
-        /* NUEVA SECCIÓN: SOLUCIONES PLÁSTICAS PARA LA INDUSTRIA Y EL CAMPO */
-        .solutions
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 50px 5%;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-header">
+        <a href="index.html" class="logo">AGROTEXTILES</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="gracias.html">Cotizaciones</a></li>
+        </ul>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Soluciones Plásticas de Polipropileno de Alta Durabilidad</h1>
+            <p>
+                Fabricación y distribución de telas tejidas, sacos y agrotextiles diseñados para resistir condiciones extremas y maximizar el rendimiento industrial y agrícola.
+            </p>
+            <div class="hero-buttons">
+                <a href="gracias.html" class="btn-green">Solicitar Cotización Directa</a>
+                <a href="#catalogo" class="btn-blue">Ver Catálogo Técnico</a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <h3>Atención Comercial & Envíos</h3>
+            <p>Ventas al por mayor directo de planta para proyectos industriales y sector agropecuario.</p>
+        </div>
+    </section>
+
+    <section id="catalogo" class="section-production">
+        <h2 class="section-title">Líneas de Producción y Catálogo Técnico</h2>
+        <p class="section-subtitle">Especializados en soluciones plásticas de polipropileno de alta densidad.</p>
+
+        <div class="grid-3">
+            <div class="card-box">
+                <h3>Agrotextiles y Mallas</h3>
+                <p>Mallas Raschel, suelo cobertor (Ground Cover) y telas antiáfidos para protección de cultivos.</p>
+                <a href="gracias.html">Consultar especificaciones →</a>
+            </div>
+
+            <div class="card-box">
+                <h3>Sacos de Polipropileno</h3>
+                <p>Sacos tejidos convencionales, laminados y con fuelles para envasado de alimentos y minerales.</p>
+                <a href="gracias.html">Consultar especificaciones →</a>
+            </div>
+
+            <div class="card-box">
+                <h3>Telas Tejidas Industriales</h3>
+                <p>Rollos de tela plástica de polipropileno de alta resistencia para empaque y cerramiento.</p>
+                <a href="gracias.html">Consultar especificaciones →</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
