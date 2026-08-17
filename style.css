@@ -1,0 +1,128 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* 1. Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 5%;
+  font-size: 12px;
+  color: #333;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.top-bar .contact-info {
+  display: flex;
+  gap: 15px;
+}
+
+.top-bar i {
+  color: #ff6624;
+}
+
+/* 2. Navbar Principal */
+.main-header {
+  background-color: #ff6624;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 12px;
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav-menu a:hover {
+  background-color: #e05316;
+}
+
+/* 3. Hero Section Grid (Las 3 fábricas) */
+.hero-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 500px;
+  position: relative;
+}
+
+.hero-col {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 30px;
+}
+
+.col-1 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('fabrica1.jpg'); }
+.col-2 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('fabrica2.jpg'); }
+.col-3 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('fabrica3.jpg'); }
+
+.badge {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.badge i { color: #ff6624; }
+
+.btn-primary {
+  margin-top: 150px;
+  background-color: #ff6624;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+/* Social & WhatsApp Buttons */
+.social-sidebar {
+  position: fixed;
+  right: 0;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-sidebar a {
+  color: white;
+  background-color: #ff6624;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
