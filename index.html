@@ -1,90 +1,96 @@
-<!DOCTYPE1 html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fibrafil - Transformando la Industria</title>
-  <!-- FontAwesome para iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Comercial Agrotextiles - Soluciones Plásticas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 1. TOP BAR (Correos, Teléfonos, Idiomas) -->
-  <div class="top-bar">
-    <div class="contact-info">
-      <div><i class="fa-regular fa-envelope"></i> ventasnacionales@grupofibrafil.com</div>
-      <div><i class="fa-regular fa-envelope"></i> ventasinternacionales@grupofibrafil.com</div>
-    </div>
-    <div class="contact-info">
-      <div><i class="fa-solid fa-phone"></i> +51 919 440 004</div>
-      <div><i class="fa-solid fa-phone"></i> +51 905 467 138</div>
-    </div>
-    <div class="language-selector">
-      <span>🇪🇸</span> <span>🇬🇧</span> <span>🇧🇷</span>
-    </div>
-  </div>
-
-  <!-- 2. NAVBAR PRINCIPAL (Naranja) -->
-  <header class="main-header">
-    <div class="logo">
-      <img src="logo.png" alt="Fibrafil Logo">
-    </div>
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="#" class="active">Inicio</a></li>
-        <li><a href="#">Catálogo <i class="fa-solid fa-chevron-down"></i></a></li>
-        <li><a href="#">Industrias <i class="fa-solid fa-chevron-down"></i></a></li>
-        <li><a href="#">Exportación</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Contáctanos <i class="fa-solid fa-chevron-down"></i></a></li>
-        <li><a href="#">Noticias</a></li>
-        <li><a href="#">🇪🇸 Español <i class="fa-solid fa-chevron-down"></i></a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- 3. HERO SECTION (Banner en 3 Columnas) -->
-  <section class="hero-section">
-    <div class="hero-col col-1">
-      <div class="badge"><i class="fa-solid fa-industry"></i> Fábrica <strong>Chilca I</strong></div>
-    </div>
-    
-    <div class="hero-col col-2">
-      <div class="badge"><i class="fa-solid fa-industry"></i> Fábrica <strong>Chilca II</strong></div>
-      <a href="#" class="btn-primary">IR A NOSOTROS</a>
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-info">
+                <span>📞 +51 987 654 321</span>
+                <span>✉️ ventas@agrotextiles.com</span>
+            </div>
+            <div class="top-links">
+                <a href="#cotizar">Solicitar Cotización</a>
+            </div>
+        </div>
     </div>
 
-    <div class="hero-col col-3">
-      <div class="badge"><i class="fa-solid fa-industry"></i> Fábrica <strong>Lurín</strong></div>
-    </div>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html"><strong>AGROTEXTILES</strong></a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#industrias">Industrias</a></li>
+                    <li><a href="#exportacion">Exportación</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contáctanos</a></li>
+                    <li><a href="#noticias">Noticias</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Overlay de datos destacados -->
-    <div class="hero-stats">
-      <div class="stat-circle">
-        <h2>+50</h2>
-        <span>AÑOS</span>
-      </div>
-      <h3>TRANSFORMANDO <span>LA INDUSTRIA</span></h3>
+    <section class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="subtitle">CALIDAD E INNOVACIÓN</p>
+                <h1>Soluciones Plásticas de Polipropileno de Alta Durabilidad</h1>
+                <p class="description">
+                    Fabricación y distribución de telas tejidas, sacos y agrotextiles diseñados para resistir condiciones extremas y maximizar el rendimiento industrial y agrícola.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#catalogo" class="btn btn-primary">Ver Catálogo Técnico</a>
+                    <a href="#contacto" class="btn btn-outline">Contacto Directo</a>
+                    <a href="gracias.html" class="btn btn-accent">Solicitar Precio de Planta</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="stat-circle">
-        <h2>+3</h2>
-      </div>
-      <h3>PLANTAS <span>INDUSTRIALES</span></h3>
-    </div>
-  </section>
+    <section id="catalogo" class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Líneas de Producción y Catálogo Técnico</h2>
+                <p>Especializados en productos de polipropileno de alta densidad para diversas industrias.</p>
+            </div>
 
-  <!-- Redes Sociales Flotantes Derecha -->
-  <div class="social-sidebar">
-    <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
-    <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-    <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-  </div>
+            <div class="grid-cards">
+                <div class="card">
+                    <h3>Agrotextiles y Mallas</h3>
+                    <p>Mallas Raschel, suelo cobertor (Ground Cover) y telas antiáfidos para protección de cultivos.</p>
+                    <a href="#contacto" class="card-link">Consultar especificaciones →</a>
+                </div>
 
-  <!-- Botón WhatsApp Flotante -->
-  <a href="https://wa.me/51919440004" class="whatsapp-btn" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i> ¿Cómo puedo ayudarte?
-  </a>
+                <div class="card">
+                    <h3>Sacos de Polipropileno</h3>
+                    <p>Sacos tejidos convencionales, laminados y con fuelles para envasado de alimentos y minerales.</p>
+                    <a href="#contacto" class="card-link">Consultar especificaciones →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Telas Tejidas Industriales</h3>
+                    <p>Rollos de tela plástica de polipropileno de alta resistencia para empaque y cerramiento.</p>
+                    <a href="#contacto" class="card-link">Consultar especificaciones →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Agrotextiles. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
